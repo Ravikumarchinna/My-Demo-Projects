@@ -26,11 +26,6 @@
     // Do any additional setup after loading the view.
 
     SecondViewController *vc = [[SecondViewController alloc] initWithNibName:@"Main" bundle:nil];
-    
-    NSLog(@"check the git peocess");
-    
-    
-    
 }
 
 
