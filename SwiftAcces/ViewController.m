@@ -26,6 +26,15 @@
     // Do any additional setup after loading the view.
 
     SecondViewController *vc = [[SecondViewController alloc] initWithNibName:@"Main" bundle:nil];
+    
+    NSLog(@"check the Stash changes");
+    
+    
+    NSString *str_helo = @"Hello,Hey";
+    NSLog(@"Get the string is %@",str_helo);
+    
+    
+    
 }
 
 
