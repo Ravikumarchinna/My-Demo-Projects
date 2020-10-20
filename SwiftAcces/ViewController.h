@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)btn_pushAction:(id)sender;
 
 @property (nonatomic,retain) NSMutableArray *arrm_data;
+@property(nonatomic,retain)NSString *str_title;
+
 
 @end
 

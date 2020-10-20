@@ -10,19 +10,27 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
- @objc var countriesList = [String:String]()
+ @objc var countriesList = [Any]()
+    
+    let str_titleget = "Sometitle"
+    
+    
+    @IBAction func btn_backAction(_ sender: Any) {
+        
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: ViewController.self) {
+                let viewVC = ViewController()
+                   viewVC.str_title = "Sometitle"
+                
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
+    }
+    
+    
     @objc let numberOfWheels = Int()
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,20 +38,13 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        let viewVC = ViewController()
-        print(viewVC.arrm_data)
+//        print(viewVC.arrm_data)
+        
+        
+        print(countriesList)
+        
         
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
